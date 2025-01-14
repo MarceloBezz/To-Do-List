@@ -4,7 +4,7 @@ const authService = new AuthService()
 class AuthController {
     static async login(req, res) {
         const { nome, senha } = req.body
-
+    
         try {
             const login = await authService.login({ nome, senha })
 

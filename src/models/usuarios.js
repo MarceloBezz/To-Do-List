@@ -28,6 +28,13 @@ module.exports = (sequelize, DataTypes) => {
       attributes: {
         exclude: ['senha']
       }
+    },
+    scopes: {
+      todasAsColunas: {
+        attributes: {
+          include: ['senha']
+        }
+      }
     }
   });
   return usuarios;

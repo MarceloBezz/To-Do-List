@@ -8,7 +8,6 @@ router.use(autenticado)
 
 router
     .get('/usuario', UsuarioController.pegaTodos)
-    .post('/usuario', UsuarioController.cadastrarUsuario)
     .get('/usuario/:id', UsuarioController.pegaPorId)
     .put('/usuario/:id', UsuarioController.editar)
     .delete('/usuario/:id', UsuarioController.deletar)

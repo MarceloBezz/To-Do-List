@@ -26,6 +26,7 @@ class TarefaService {
             const tarefas = await database.tarefas.findAll({
                 include: {
                     model: database.usuarios,
+                    as: 'usuario',
                     attributes: ['nome']
                 }
             })
@@ -40,6 +41,11 @@ class TarefaService {
         const tarefa = await database.tarefas.findOne({
             where: {
                 id: id
+            },
+            include: {
+                model: database.usuarios,
+                as: 'usuario',
+                attributes: ['nome']
             }
         })
 
